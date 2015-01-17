@@ -169,7 +169,7 @@ bool SharedBigMatrix::create_uuid()
   try
   {
     stringstream ss;
-    boost::uuids::basic_random_generator<boost::mt19937> gen;
+    boost::uuids::random_generator gen;
     boost::uuids::uuid u = gen();
     ss << u;
     _uuid = ss.str();
